@@ -5,13 +5,12 @@
     <title>Cifra de Cesar</title>
     <script src="app.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body onload="cipher()">
     <h1>Sua mensagem criptografada:</h1>
-    <button type="button" onclick=cipher() name="button" >Me mostre!</button>
-    <p id="msg">Você ainda não submeteu mensagem alguma.</p>
+    <p id="msg"></p>
     <br>
     <button type="button" onclick=decipher() name="button" >Descriptografar</button>
-    <p id="reverse">Você ainda não submeteu mensagem alguma.</p>
+    <p id="reverse"></p>
 
 
   </body>
