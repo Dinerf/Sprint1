@@ -5,6 +5,6 @@
 - A função avalia se o caractere é uma letra maiuscula ou minuscula e aplica a fórmula de encriptação correspondente
 - Aparece a mensagem criptografada
 - Ao clicar no botão "Descriptografar", inicia a função decipher
-- A função avalia cada caractere individualmente e aplica a fórmula para decifrar o código.
+- A função avalia se o caractere é uma letra maiuscula ou minuscula e aplica a fórmula de encriptação correspondente
 
 ![Fluxograma] (Fluxograma-Cifra-de-Cesar.svg)
