@@ -10,8 +10,20 @@ do {
     }
   }
 } while (regularMsg === "" || regularMsg === null);
+do {
+  var key = prompt("Insira a chave de criptografia com 1 ou 2 dígitos");
+  if(key != null) {
+    for(i = 0; i< key.length; i++) {
+      if(key.charCodeAt(i) < 48 || key.charCodeAt(i) > 57 || key.length > 2) {
+        alert("Preencha somente números! \n (No máximo 2 dígitos)")
+        key = "";
+        break;
+      }
+    }
+  }
+} while (key === "" || key === null);
+key = parseInt(key);
 var encryptedMsg = "";
-var key = parseInt(prompt("Insira a chave de criptografia"));
 function cipher() {
   for(i = 0; i < regularMsg.length; i++) {
     var character = regularMsg.charCodeAt(i);
@@ -29,24 +41,15 @@ function cipher() {
 }
 var decipheredMsg = "";
 function decipher() {
-  console.log(encryptedMsg);
   for(i = 0; i < encryptedMsg.length; i++) {
     var cipheredCharacter = encryptedMsg.charCodeAt(i);
-    console.log(cipheredCharacter);
     if(cipheredCharacter < 91) {
-      console.log(key);
       var decipheredCharacter = (cipheredCharacter + 65 - key) % 26 + 65;
-      console.log(decipheredCharacter);
       decipheredCharacter = String.fromCharCode(decipheredCharacter);
-      console.log(decipheredCharacter);
       decipheredMsg += decipheredCharacter;
     } else {
-      console.log(key);
-      console.log(cipheredCharacter);
       var decipheredCharacter = (cipheredCharacter + 7 - key) % 26 + 97;
-      console.log(decipheredCharacter);
       decipheredCharacter = String.fromCharCode(decipheredCharacter);
-      console.log(decipheredCharacter);
       decipheredMsg += decipheredCharacter;
     }
   }
