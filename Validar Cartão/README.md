@@ -10,4 +10,4 @@
 - Caso a divisão do produto por 10 seja exata, aparecerá a mensagem "Cartão Inválido"
 - Caso contrário, aparecerá a mensagem "Cartão Inválido"
 
-![Fluxograma] (Validar-Cartao.svg)
+![Fluxograma](Validar-Cartao.svg)
